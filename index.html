@@ -3,164 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/addons/p5.dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/addons/p5.sound.js"></script>
-
-    <script language="javascript" type="text/javascript" src="sketch.js"></script>
-
-    <title>Anim</title>
+    <title>A Web Page of Nedas</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <style>
-        canvas {
-            background-image: url(assets/img/background02.png);
+        html {
+            background-image: url(http://wallpapercave.com/wp/raEK5Wb.jpg);
             background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+
         }
     </style>
 
 </head>
 
 <body>
-    <canvas id="cvs" height="700px" width="1000px"></canvas>
-
-    <script>
-        var fps = 60; // Kadrai per sekunde
-        var cvs = document.getElementById("cvs");
-        var ctx = cvs.getContext("2d");
-        
-        var cnt = 0;
-        var cnt1 = 0;
-        
-        var ship1 = 0;
-        var ship2 = 0;
-        var blades = 0;
-        var cloud1 = 0;
-        var cloud2 = 0;
-        var cloud3 = 0;
-        var cloud4 = 0;
-        var cloud5 = 0;
-        var cloud6 = 0;
-
-
-        var ship1_img = new Image();
-        ship1_img.src = "assets/img/ship01.png";
-
-        var ship2_img = new Image();
-        ship2_img.src = "assets/img/ship03.png";
-
-        var cloud_img = new Image();
-        cloud_img.src = "assets/img/cloud.png";
-
-        var blades_img = new Image();
-        blades_img.src = "assets/img/blades.png";
-
-
-
-        function frame() { // Kartoja pati save
-            setTimeout(frame, 1000 / fps);
-            calc();
-            requestAnimationFrame(render);
-        }
-
-        function calc() { // Skaiciavimai
-            cnt+=0.1;
-
-            cnt += 5 * micLevel;
-            
-            ship1 += 0.5 + 8 * micLevel;
-            ship2 += 0.5 + 12 * micLevel;
-            
-            cloud1 += 0.5 + 18 * micLevel;
-            cloud2 += 0.5 + 14 * micLevel;
-            cloud3 += 0.5 + 7 * micLevel;
-            cloud4 += 0.5 + 2 * micLevel;
-            cloud5 += 0.5 + 8 * micLevel;
-            cloud6 += 0.5 + 1 * micLevel;
-
-            if (cnt1 > 1200) {
-                cnt1 = 0;
-            }
-            
-            
-            //ship1
-            if (ship1 > 1300) {
-                ship1 = 0;
-            }
-            //ship1
-
-
-            //ship2
-            if (ship2 > 1300) {
-                ship2 = 0;
-            }
-            //ship2
-
-
-            //cloud1
-            if (cloud1 > 1300) {
-                cloud1 = 0;
-            }
-            //cloud1
-
-
-            //cloud2
-            if (cloud2 > 1700) {
-                cloud2 = 0;
-            }
-            //cloud2
-
-
-            //cloud3
-            if (cloud3 > 2200) {
-                cloud3 = 0;
-            }
-            //cloud3
-
-
-            //cloud4
-            if (cloud4 > 1900) {
-                cloud4 = 0;
-            }
-            //cloud4
-
-
-            //cloud5
-            if (cloud5 > 1500) {
-                cloud5 = 0;
-            }
-            //cloud5
-
-
-            //cloud6
-            if (cloud6 > 1100) {
-                cloud6 = 0;
-            }
-            //cloud6
-        }
-
-        function render() { // Piesimas ekrane
-            ctx.clearRect(0, 0, cvs.width, cvs.height);
-
-            ctx.save(); //sukimosi pradzia
-                ctx.translate(934.3, 387);
-                ctx.rotate(Math.PI / 10 * cnt);
-                ctx.drawImage(blades_img, -50, -50);
-            ctx.restore(); //sukimosi pabaiga
-
-
-            ctx.drawImage(ship2_img, 1000 - ship2, 350, 170, 172);
-            ctx.drawImage(ship1_img, -300 + ship1, 390, 170, 190);
-            
-            ctx.drawImage(cloud_img, -300 + cloud1, 30, 50, 26);
-            ctx.drawImage(cloud_img, -700 + cloud2, 50, 70, 36);
-            ctx.drawImage(cloud_img, -1200 + cloud3, 60, 100, 52);
-            ctx.drawImage(cloud_img, -900 + cloud4, 10);
-            ctx.drawImage(cloud_img, -500 + cloud5, 20, 120, 62);
-            ctx.drawImage(cloud_img, -100 + cloud6, 0, 144, 74);
-        }
-
-        frame(); // Kadru laikmacio startas
-    </script>
+    <h1>Greetings Fellas</h1>
 </body>
 
 </html>
